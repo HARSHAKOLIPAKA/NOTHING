@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="ChatFlux - Enjoy your conversations. Stay together."
+    >
+
+    <title>ChatFlux — Connect & Chat</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ================================================= -->
+    <!-- BACKGROUND EFFECTS -->
+    <!-- ================================================= -->
+
+    <div class="background">
+
+        <div class="glow glow-one"></div>
+        <div class="glow glow-two"></div>
+        <div class="glow glow-three"></div>
+
+        <div class="grid"></div>
+
+    </div>
+
+
+    <!-- ================================================= -->
+    <!-- LOGIN SCREEN -->
+    <!-- ================================================= -->
+
+    <section id="loginScreen" class="screen">
+
+        <div class="login-container">
+
+            <!-- Logo -->
+
+            <div class="brand">
+
+                <div class="brand-icon">
+                 ☎︎
+                </div>
+
+                <h1>
+                    Chat<span>Flux</span>
+                </h1>
+
+            </div>
+
+
+            <!-- Tagline -->
+
+            <div class="welcome-text">
+
+                <h2>
+                    Welcome back to my website
+                </h2>
+
+                <p>
+                    Connect with people.<br>
+                    Share moments-Start conversations.
+                </p>
+
+            </div>
+
+
+            <!-- Login Card -->
+
+            <div class="login-card">
+
+                <div class="card-header">
+
+                    <span class="online-dot"></span>
+
+                    <span>
+                        Join ChatFlux
+                    </span>
+
+                </div>
+
+
+                <label for="usernameInput">
+                    Username
+                </label>
+
+
+                <div class="input-wrapper">
+
+                    <span class="input-icon">
+                        @
+                    </span>
+
+                    <input
+                        id="usernameInput"
+                        type="text"
+                        placeholder="Enter your username"
+                        maxlength="30"
+                        autocomplete="off"
+                        spellcheck="false"
+                    >
+
+                </div>
+
+
+                <button
+                    id="joinButton"
+                    class="primary-button"
+                    type="button"
+                >
+
+                    <span>
+                        Enter Chat
+                    </span>
+
+                    <span class="arrow">
+                        →
+                    </span>
+
+                </button>
+
+
+                <p
+                    id="loginError"
+                    class="error"
+                ></p>
+
+
+                <div class="security-note">
+
+                    <span>🔒</span>
+
+                    <span>
+                        Your conversations are protected from Harsha
+
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <!-- Footer -->
+
+            <div class="login-footer">
+
+                <span>
+                    ChatFlux
+                </span>
+
+                <span class="separator">
+                           - 
+                </span>
+
+                <span>
+                   Stay connected  , Enjoy your chat- Stay together.
+                </span>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================================================= -->
+    <!-- CHAT SCREEN -->
+    <!-- ================================================= -->
+
+    <section
+        id="chatScreen"
+        class="chat-screen hidden"
+    >
+
+        <!-- ================================================= -->
+        <!-- CHAT HEADER -->
+        <!-- ================================================= -->
+
+        <header class="chat-header">
+
+            <div class="header-left">
+
+                <div class="brand mini">
+
+                    <div class="brand-icon">
+                        ☎︎
+                    </div>
+
+                    <div>
+
+                        <h1>
+                            Chat<span>Flux</span>
+                        </h1>
+
+                        <div
+                            id="onlineStatus"
+                            class="status"
+                        >
+                            <span class="status-dot"></span>
+                            Connecting...
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="header-right">
+
+                <div class="current-user">
+
+                    <div class="avatar">
+                        <span id="avatarLetter">
+                            ?
+                        </span>
+                    </div>
+
+                    <div class="user-details">
+
+                        <span class="user-label">
+                            You
+                        </span>
+
+                        <strong id="currentUsername">
+                            User
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- ================================================= -->
+        <!-- CHAT BODY -->
+        <!-- ================================================= -->
+
+        <div class="chat-body">
+
+            <!-- SIDEBAR -->
+
+            <aside class="sidebar">
+
+                <div class="sidebar-title">
+
+                    <span>
+                        Online
+                    </span>
+
+                    <span
+                        id="onlineCount"
+                        class="count"
+                    >
+                        0
+                    </span>
+
+                </div>
+
+
+                <div
+                    id="usersList"
+                    class="users-list"
+                >
+
+                    <!-- Users will appear here -->
+
+                </div>
+
+            </aside>
+
+
+            <!-- MESSAGE AREA -->
+
+            <main class="chat-main">
+
+                <div
+                    id="messages"
+                    class="messages"
+                >
+
+                    <div class="welcome-message">
+
+                        <div class="welcome-icon">
+                            ✨
+                        </div>
+
+                        <h2>
+                            Welcome to ChatFlux
+                        </h2>
+
+                        <p>
+                            You're connected.
+                            Start a conversation below.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- TYPING -->
+
+                <div
+                    id="typingIndicator"
+                    class="typing-indicator"
+                ></div>
+
+
+                <!-- MESSAGE INPUT -->
+
+                <div class="input-area">
+
+                    <form
+                        id="messageForm"
+                        class="message-form"
+                    >
+
+                        <button
+                            type="button"
+                            class="emoji-button"
+                            title="Emoji"
+                        >
+                            😊
+                        </button>
+
+
+                        <input
+                            id="messageInput"
+                            type="text"
+                            placeholder="Write a message..."
+                            maxlength="500"
+                            autocomplete="off"
+                            spellcheck="false"
+                        >
+
+
+                        <button
+                            id="sendButton"
+                            type="submit"
+                            class="send-button"
+                            title="Send message"
+                        >
+                            <span>➤</span>
+                        </button>
+
+                    </form>
+
+                </div>
+
+            </main>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================================================= -->
+    <!-- SOCKET.IO -->
+    <!-- ================================================= -->
+
+    <script src="/socket.io/socket.io.js"></script>
+
+
+    <!-- ================================================= -->
+    <!-- CHATFLUX JAVASCRIPT -->
+    <!-- ================================================= -->
+
+    <script src="script.js"></script>
+
+</body>
+</html>
